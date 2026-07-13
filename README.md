@@ -10,6 +10,7 @@
 
 ## โครงสร้างไฟล์
 
+```
 engse203-lab02-68543210009-5/
 ├── public/
 │   ├── .nojekyll
@@ -29,6 +30,7 @@ engse203-lab02-68543210009-5/
 ├── package.json
 ├── README.md
 └── vite.config.js
+```
 
 ### โครงสร้างโมดูล (Modules)
 
@@ -56,6 +58,7 @@ npm install
 
 ## การสร้าง SSH Key
 
+```
 # สร้าง SSH key
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
@@ -64,6 +67,7 @@ cat ~/.ssh/id_ed25519.pub
 
 # ทดสอบการเชื่อมต่อกับ GitHub
 ssh -T git@github.com
+```
 
 หลังจากสร้าง key แล้ว ให้นำ public key ไปเพิ่มที่ GitHub → Settings → SSH and GPG keys → New SSH key
 
@@ -73,24 +77,19 @@ ssh -T git@github.com
 
 https://njuntaya.github.io/engse203-lab02-68543210009-5/
 
-
-
 ---
 
 ## ภาพหน้าจอ (Screenshots)
 
 ### Normal State
 https://njuntaya.github.io/engse203-lab02-68543210009-5/
-|<img width="1897" height="992" alt="a0d07ccc-866d-4046-b47a-1eb29c8eb581" src="https://github.com/user-attachments/assets/7cb97f28-5c1c-4795-961f-1750632fea86" />
 
-
-
-
+<img width="1897" height="992" alt="Normal state screenshot" src="https://github.com/user-attachments/assets/7cb97f28-5c1c-4795-961f-1750632fea86" />
 
 ### Error State
 https://njuntaya.github.io/engse203-lab02-68543210009-5/?simulateError=1
-<img width="1919" height="1079" alt="553fc291-4954-4de1-b0af-517e268e716d" src="https://github.com/user-attachments/assets/2637ca34-24e9-40ff-b6f2-0a567273fbf2" />
 
+<img width="1919" height="1079" alt="Error state screenshot" src="https://github.com/user-attachments/assets/2637ca34-24e9-40ff-b6f2-0a567273fbf2" />
 
 ---
 
@@ -98,8 +97,7 @@ https://njuntaya.github.io/engse203-lab02-68543210009-5/?simulateError=1
 
 | ปัญหาที่พบ | สาเหตุ | วิธีแก้ไข |
 |-----------|--------|-----------|
-| export default defineConfig() ซ้ำกันสองครั้งใน vite.config.js | มี711885" />
-การเขียน export default ซ้ำกันสองบรรทัดในไฟล์เดียว | ลบให้เหลือเพียงครั้งเดียว |
+| export default defineConfig() ซ้ำกันสองครั้งใน vite.config.js | มีการเขียน export default ซ้ำกันสองบรรทัดในไฟล์เดียว | ลบให้เหลือเพียงครั้งเดียว |
 | vite: not found บน WSL | ยังไม่ได้ติดตั้ง dependencies — ไม่มีโฟลเดอร์ node_modules | รัน npm install จากนั้นตรวจสอบด้วย npx vite --version แล้วค่อยรัน npm run build |
 | Permission denied (publickey) ตอน git push | GitHub ไม่รู้จัก SSH key ของเครื่อง ทำให้ยืนยันตัวตนไม่ได้ | เปลี่ยนจาก SSH URL มาใช้ HTTPS URL แทน เช่น https://github.com/username/repo.git แล้วรัน git remote set-url origin <HTTPS URL> |
 
@@ -110,4 +108,4 @@ https://njuntaya.github.io/engse203-lab02-68543210009-5/?simulateError=1
 | เครื่องมือ | วัตถุประสงค์ที่ใช้ |
 |-----------|-----------------|
 | Claude (Anthropic) | ช่วยสร้าง README template, อธิบายโครงสร้างโปรเจกต์ และตรวจสอบการเขียนเอกสาร |
-| Google Gemini | ช่วย research และแนะนำวิธีแก้ไข error ของ command line บน WSL 
+| Google Gemini | ช่วย research และแนะนำวิธีแก้ไข error ของ command line บน WSL |
